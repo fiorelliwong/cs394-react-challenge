@@ -17,14 +17,14 @@ const CourseList = ({ courses }: CourseListProps) => {
       {Object.values(courses).map((course) => (
         <div
           key={course.number}
-          className="w-60 rounded-lg border border-gray-300 p-4 shadow-sm hover:shadow-md"
+          className="flex w-60 flex-col rounded-lg border border-gray-300 p-4 min-h-50 shadow-sm hover:shadow-md"
         >
-          <h2 className="font-bold text-lg">
+          <h2 className="font-bold text-lg break-words">
             {course.term} CS {course.number}
           </h2>
-          <p className="text-gray-600">{course.title}</p>
-          <hr></hr>
-          <p className="mt-2 text-sm text-gray-500">{course.meets}</p>
+          <p className="text-gray-600 break-words">{course.title}</p>
+          <hr className="mt-auto border-gray-300" />
+          <p className="mt-2 text-sm text-gray-500 break-words">{course.meets}</p>
         </div>
       ))}
     </div>
