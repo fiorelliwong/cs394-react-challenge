@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TermSelector from './TermSelector';
 import CourseList from './CourseList';
+import CoursePlanner from './CoursePlanner';
 
 interface CourseDetails {
   term: string;
@@ -22,11 +23,14 @@ const TermPage = ({ courses }: TermPageProps) => {
 
   return (
     <div>
-      <TermSelector
+      <div>
+        <TermSelector
         terms={terms}
         selectedTerm={selectedTerm}
         setSelectedTerm={setSelectedTerm}
       />
+      <CoursePlanner />
+      </div>
       <CourseList courses={courses} selectedTerm={selectedTerm} />
     </div>
   );
