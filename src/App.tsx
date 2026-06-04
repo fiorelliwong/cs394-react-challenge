@@ -1,5 +1,5 @@
 import Banner from './components/Banner'
-import CourseList from './components/CourseList'
+import TermPage from './components/TermPage'
 import { useJsonQuery } from './utilities/fetch';
 
 interface CourseDetails {
@@ -27,7 +27,7 @@ const App = () => {
   return (
     <main>
       <Banner title={schedule.title} />
-      <CourseList courses={schedule.courses} />
+      <TermPage courses={schedule.courses} />
     </main>
   );
 };
